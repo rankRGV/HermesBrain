@@ -1,0 +1,84 @@
+[
+  {
+    "business_name": "Brown Louis C",
+    "city": "Mission",
+    "niche": "criminal defense lawyer",
+    "rank": 4,
+    "phone": "+1956-585-4864",
+    "website": "www.louisbrownlaw.com",
+    "enrichment_status": "scraped",
+    "opportunity_flags": [
+      "no_obvious_faq",
+      "no_obvious_cta",
+      "thin_main_content",
+      "no_obvious_about_page"
+    ],
+    "notes": [
+      "Firecrawl scrape executed for www.louisbrownlaw.com",
+      "Source URL: http://www.louisbrownlaw.com",
+      "Status code: 200"
+    ],
+    "firecrawl_metadata": {
+      "title": null,
+      "description": null,
+      "sourceURL": "http://www.louisbrownlaw.com",
+      "statusCode": 200
+    }
+  },
+  {
+    "business_name": "Davis Darrell",
+    "city": "Mission",
+    "niche": "criminal defense lawyer",
+    "rank": 5,
+    "phone": "+1956-588-1622",
+    "website": null,
+    "enrichment_status": "no_website",
+    "opportunity_flags": [
+      "high_opportunity_no_website"
+    ],
+    "notes": [
+      "No website in Phase 1 parser output. Firecrawl scrape skipped."
+    ]
+  },
+  {
+    "business_name": "Brown Louis C",
+    "city": "Mission",
+    "niche": "criminal defense lawyer",
+    "rank": 4,
+    "phone": "+1956-585-4864",
+    "website": "www.louisbrownlaw.com",
+    "enrichment_status": "scraped",
+    "opportunity_flags": [
+      "no_obvious_faq",
+      "no_obvious_cta",
+      "thin_main_content",
+      "no_obvious_about_page"
+    ],
+    "notes": [
+      "Firecrawl scrape executed for www.louisbrownlaw.com",
+      "Source URL: http://www.louisbrownlaw.com",
+      "Status code: 200"
+    ],
+    "firecrawl_metadata": {
+      "title": null,
+      "description": null,
+      "sourceURL": "http://www.louisbrownlaw.com",
+      "statusCode": 200
+    }
+  },
+  {
+    "business_name": "Davis Darrell",
+    "city": "Mission",
+    "niche": "criminal defense lawyer",
+    "rank": 5,
+    "phone": "+1956-588-1622",
+    "website": null,
+    "enrichment_status": "no_website",
+    "opportunity_flags": [
+      "high_opportunity_no_website"
+    ],
+    "notes": [
+      "No website in Phase 1 parser output. Firecrawl scrape skipped."
+    ]
+  }
+]

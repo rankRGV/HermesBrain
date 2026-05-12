@@ -1,0 +1,207 @@
+{
+  "date": "2026-05-11",
+  "city": "Mission",
+  "niche": "criminal defense lawyer",
+  "scores": [
+    {
+      "business_name": "Davis Darrell",
+      "rank": 5,
+      "rating": 4.5,
+      "review_count": 2,
+      "website": null,
+      "phone": "+1956-588-1622",
+      "score_total": 96,
+      "bucket": "A",
+      "recommended_offer": "full_website_gbp_reviews",
+      "score_breakdown": {
+        "rank": {
+          "points": 28,
+          "max": 30,
+          "reason": "rank_5_in_target_band"
+        },
+        "reviews": {
+          "points": 18,
+          "max": 20,
+          "reason": "low_review_count_high_rating"
+        },
+        "website": {
+          "points": 30,
+          "max": 30,
+          "reason": "no_website_greenfield_opportunity"
+        },
+        "opportunity": {
+          "points": 20,
+          "max": 20,
+          "reason": "phone_present_no_website"
+        }
+      },
+      "opportunity_flags": [
+        "high_opportunity_no_website"
+      ],
+      "enrichment_status": "no_website",
+      "notes": [
+        "No website in Phase 1 parser output. Firecrawl scrape skipped."
+      ]
+    },
+    {
+      "business_name": "Davis Darrell",
+      "rank": 5,
+      "rating": 4.5,
+      "review_count": 2,
+      "website": null,
+      "phone": "+1956-588-1622",
+      "score_total": 96,
+      "bucket": "A",
+      "recommended_offer": "full_website_gbp_reviews",
+      "score_breakdown": {
+        "rank": {
+          "points": 28,
+          "max": 30,
+          "reason": "rank_5_in_target_band"
+        },
+        "reviews": {
+          "points": 18,
+          "max": 20,
+          "reason": "low_review_count_high_rating"
+        },
+        "website": {
+          "points": 30,
+          "max": 30,
+          "reason": "no_website_greenfield_opportunity"
+        },
+        "opportunity": {
+          "points": 20,
+          "max": 20,
+          "reason": "phone_present_no_website"
+        }
+      },
+      "opportunity_flags": [
+        "high_opportunity_no_website"
+      ],
+      "enrichment_status": "no_website",
+      "notes": [
+        "No website in Phase 1 parser output. Firecrawl scrape skipped."
+      ]
+    },
+    {
+      "business_name": "Brown Louis C",
+      "rank": 4,
+      "rating": 4.1,
+      "review_count": 9,
+      "website": "www.louisbrownlaw.com",
+      "phone": "+1956-585-4864",
+      "score_total": 90,
+      "bucket": "A",
+      "recommended_offer": "website_refresh_gbp_optimization",
+      "score_breakdown": {
+        "rank": {
+          "points": 26,
+          "max": 30,
+          "reason": "rank_4_in_target_band"
+        },
+        "reviews": {
+          "points": 16,
+          "max": 20,
+          "reason": "low_review_count"
+        },
+        "website": {
+          "points": 30,
+          "max": 30,
+          "reason": "verified_website_gaps"
+        },
+        "opportunity": {
+          "points": 18,
+          "max": 20,
+          "reason": "verified_fixable_website"
+        }
+      },
+      "opportunity_flags": [
+        "no_obvious_faq",
+        "no_obvious_cta",
+        "thin_main_content",
+        "no_obvious_about_page"
+      ],
+      "enrichment_status": "scraped",
+      "notes": [
+        "Firecrawl scrape executed for www.louisbrownlaw.com",
+        "Source URL: http://www.louisbrownlaw.com",
+        "Status code: 200"
+      ]
+    },
+    {
+      "business_name": "Brown Louis C",
+      "rank": 4,
+      "rating": 4.1,
+      "review_count": 9,
+      "website": "www.louisbrownlaw.com",
+      "phone": "+1956-585-4864",
+      "score_total": 90,
+      "bucket": "A",
+      "recommended_offer": "website_refresh_gbp_optimization",
+      "score_breakdown": {
+        "rank": {
+          "points": 26,
+          "max": 30,
+          "reason": "rank_4_in_target_band"
+        },
+        "reviews": {
+          "points": 16,
+          "max": 20,
+          "reason": "low_review_count"
+        },
+        "website": {
+          "points": 30,
+          "max": 30,
+          "reason": "verified_website_gaps"
+        },
+        "opportunity": {
+          "points": 18,
+          "max": 20,
+          "reason": "verified_fixable_website"
+        }
+      },
+      "opportunity_flags": [
+        "no_obvious_faq",
+        "no_obvious_cta",
+        "thin_main_content",
+        "no_obvious_about_page"
+      ],
+      "enrichment_status": "scraped",
+      "notes": [
+        "Firecrawl scrape executed for www.louisbrownlaw.com",
+        "Source URL: http://www.louisbrownlaw.com",
+        "Status code: 200"
+      ]
+    }
+  ],
+  "competitor_context": [
+    {
+      "date": "2026-05-11",
+      "niche": "criminal defense lawyer",
+      "city": "Mission",
+      "keyword": "defense attorney mission tx",
+      "business_name": "Mexus Law Firm",
+      "rank": 6,
+      "rating": 1,
+      "review_count": 5,
+      "website": null,
+      "phone": null,
+      "status": "excluded",
+      "exclusion_reason": "outside_target_city"
+    },
+    {
+      "date": "2026-05-11",
+      "niche": "criminal defense lawyer",
+      "city": "Mission",
+      "keyword": "defense attorney mission tx",
+      "business_name": "Mexus Law Firm",
+      "rank": 6,
+      "rating": 1,
+      "review_count": 5,
+      "website": null,
+      "phone": null,
+      "status": "excluded",
+      "exclusion_reason": "outside_target_city_competitor_signal"
+    }
+  ]
+}

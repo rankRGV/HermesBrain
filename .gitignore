@@ -5,3 +5,5 @@
 *.bak
 __pycache__/
 .DS_Store
+runtime/
+output/
