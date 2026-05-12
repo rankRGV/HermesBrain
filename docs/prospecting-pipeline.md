@@ -69,5 +69,5 @@ The wrapper writes to:
 Use this in Hermes after pulling the repo:
 
 ```text
-Read /root/HermesBrain/context/agency-profile.md, /root/HermesBrain/config/rgv-exclusions.md, and /root/HermesBrain/docs/prospecting-pipeline.md. Then use the deterministic scripts in /root/HermesBrain/scripts/prospecting for any prospecting work instead of freehand parsing.
+Read /root/HermesBrain/context/hermes-operator-memory.md, /root/HermesBrain/context/agency-profile.md, /root/HermesBrain/config/rgv-exclusions.md, and /root/HermesBrain/docs/prospecting-pipeline.md. Then use the deterministic scripts in /root/HermesBrain/scripts/prospecting for any prospecting work instead of freehand parsing.
 ```
