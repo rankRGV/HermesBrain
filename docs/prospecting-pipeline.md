@@ -24,8 +24,8 @@ FIRECRAWL_API_KEY=
 
 ## Pipeline Stages
 
-1. Fetch raw map-pack data from DataForSEO
-2. Parse ranks 4-6 and apply exclusions
+1. Fetch raw local search data from DataForSEO
+2. Parse ranks 4-8 and apply exclusions
 3. Enrich shortlisted prospects with Firecrawl when a website exists
 4. Score prospects deterministically
 5. Write digest and per-prospect notes
@@ -36,7 +36,7 @@ Run a manual fetch:
 
 ```bash
 cd /root/HermesBrain
-bash scripts/prospecting/fetch_dataforseo_maps.sh "defense attorney mission tx" "26.2159,-98.3252,0" "2026-05-12" "defense-attorney-mission"
+bash scripts/prospecting/fetch_dataforseo_maps.sh "criminal defense attorney mission tx" "26.2159,-98.3252,0" "2026-05-13" "criminal-defense-attorney-mission" "local_finder" "desktop" "windows"
 ```
 
 Run the full deterministic pipeline:
@@ -44,12 +44,24 @@ Run the full deterministic pipeline:
 ```bash
 cd /root/HermesBrain
 bash scripts/prospecting/run_pipeline.sh \
-  "defense attorney mission tx" \
+  "criminal defense attorney mission tx" \
   "26.2159,-98.3252,0" \
   "Mission" \
-  "criminal defense lawyer" \
-  "2026-05-12" \
-  "defense-attorney-mission"
+  "criminal defense attorney" \
+  "2026-05-13" \
+  "criminal-defense-attorney-mission" \
+  "local_finder" \
+  "desktop" \
+  "windows"
+
+## Recommended defaults
+
+- `se_type=local_finder`
+- `device=desktop`
+- `os=windows`
+- rank band `4-8`
+
+Use `maps` as a secondary comparison source only when debugging differences between Google surfaces.
 ```
 
 ## Outputs

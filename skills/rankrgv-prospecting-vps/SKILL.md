@@ -38,7 +38,7 @@ The user should not need to specify script names or repo paths.
 - Check `/root/HermesBrain/runtime/` before summarizing prior work.
 - Obey `/root/HermesBrain/config/rgv-exclusions.md` before shortlisting prospects.
 - If required files or env vars are missing, stop and say exactly what is missing.
-- Do not change scope without approval. If the requested city returns too few listings or no viable rank 4-6 candidates, summarize the result and ask before broadening to nearby cities, alternate locations, adjacent niches, or modified keywords.
+- Do not change scope without approval. If the requested city returns too few listings or no viable rank 4-8 candidates, summarize the result and ask before broadening to nearby cities, alternate locations, adjacent niches, or modified keywords.
 - Lack of user response is not approval. If a clarification request is unanswered or times out, stop and wait. Do not continue automatically.
 
 ## Required env vars
@@ -68,8 +68,13 @@ bash scripts/prospecting/run_pipeline.sh \
   "[City]" \
   "[niche]" \
   "[YYYY-MM-DD]" \
-  "[slug]"
+  "[slug]" \
+  "local_finder" \
+  "desktop" \
+  "windows"
 ```
+
+Default to `local_finder` because it better matches the Google Places / local discovery experience a prospect sees.
 
 ## City coordinates
 

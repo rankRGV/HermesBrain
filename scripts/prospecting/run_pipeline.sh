@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ "$#" -ne 6 ]; then
-  echo "Usage: $0 <keyword> <location_coordinate> <city> <niche> <run_date> <slug>" >&2
+if [ "$#" -lt 6 ] || [ "$#" -gt 9 ]; then
+  echo "Usage: $0 <keyword> <location_coordinate> <city> <niche> <run_date> <slug> [se_type] [device] [os]" >&2
   exit 1
 fi
 
@@ -12,6 +12,9 @@ CITY="$3"
 NICHE="$4"
 RUN_DATE="$5"
 SLUG="$6"
+SE_TYPE="${7:-local_finder}"
+DEVICE="${8:-desktop}"
+OS="${9:-windows}"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 ENV_FILE="$ROOT_DIR/.env"
@@ -22,7 +25,7 @@ if [ -f "$ENV_FILE" ]; then
   set +a
 fi
 
-RAW_JSON="$(bash "$ROOT_DIR/scripts/prospecting/fetch_dataforseo_maps.sh" "$KEYWORD" "$LOCATION_COORDINATE" "$RUN_DATE" "$SLUG")"
+RAW_JSON="$(bash "$ROOT_DIR/scripts/prospecting/fetch_dataforseo_maps.sh" "$KEYWORD" "$LOCATION_COORDINATE" "$RUN_DATE" "$SLUG" "$SE_TYPE" "$DEVICE" "$OS")"
 INDEX_JSONL="$ROOT_DIR/runtime/data/dataforseo/index.jsonl"
 EXCLUSIONS_MD="$ROOT_DIR/config/rgv-exclusions.md"
 FIRECRAWL_DIR="$ROOT_DIR/runtime/data/firecrawl/$RUN_DATE"
@@ -73,3 +76,4 @@ echo "Enrichment: $FIRECRAWL_DIR/enrichment-summary.json"
 echo "Scores: $SCORES_JSON"
 echo "Digest: $DIGEST_MD"
 echo "Notes dir: $NOTES_DIR/$RUN_DATE"
+echo "SERP mode: $SE_TYPE | device: $DEVICE | os: $OS"

@@ -33,6 +33,16 @@ def city_from_address_info(item: dict[str, Any]) -> str | None:
     return (((item.get("address_info") or {}).get("city")) or "").strip() or None
 
 
+def item_rank(item: dict[str, Any]) -> int | None:
+    rank = item.get("rank_absolute")
+    if isinstance(rank, int):
+        return rank
+    rank = item.get("rank_group")
+    if isinstance(rank, int):
+        return rank
+    return None
+
+
 @dataclass
 class Exclusions:
     active_clients: set[str]
@@ -123,7 +133,7 @@ def to_index_row(
         "city": city,
         "keyword": keyword,
         "business_name": item.get("title"),
-        "rank": item.get("rank_absolute"),
+        "rank": item_rank(item),
         "rating": rating.get("value"),
         "review_count": rating.get("votes_count"),
         "website": compact_domain(item.get("url")),
@@ -158,14 +168,14 @@ def render_summary(
     lines.append(f"Index file: {index_path}")
     lines.append(f"Total returned items: {len(items)}")
     lines.append("")
-    lines.append("Exact rank 4-6 items:")
-    ranks = [item for item in items if item.get("rank_absolute") in {4, 5, 6}]
+    lines.append("Exact rank 4-8 items:")
+    ranks = [item for item in items if item_rank(item) in {4, 5, 6, 7, 8}]
     if not ranks:
         lines.append("- none")
     for item in ranks:
         rating = item.get("rating") or {}
         lines.append(
-            f"- rank {item.get('rank_absolute')}: {item.get('title')} | "
+            f"- rank {item_rank(item)}: {item.get('title')} | "
             f"rating={rating.get('value')} reviews={rating.get('votes_count')} | "
             f"website={compact_domain(item.get('url')) or 'missing'} | "
             f"phone={item.get('phone') or 'missing'} | "
@@ -182,7 +192,7 @@ def render_summary(
         if not item.get("url") and item.get("phone"):
             notes.append("high_opportunity_no_website")
         lines.append(
-            f"- {item.get('title')} (rank {item.get('rank_absolute')}) | "
+            f"- {item.get('title')} (rank {item_rank(item)}) | "
             f"rating={rating.get('value')} reviews={rating.get('votes_count')} | "
             f"website={compact_domain(item.get('url')) or 'missing'} | "
             f"phone={item.get('phone') or 'missing'}"
@@ -193,7 +203,7 @@ def render_summary(
     if not excluded:
         lines.append("- none")
     for item, reason in excluded:
-        lines.append(f"- {item.get('title')} (rank {item.get('rank_absolute')}): {reason}")
+        lines.append(f"- {item.get('title')} (rank {item_rank(item)}): {reason}")
     lines.append("")
     competitor_signals = [(item, reason) for item, reason in excluded if reason == "outside_target_city_competitor_signal"]
     if competitor_signals:
@@ -201,7 +211,7 @@ def render_summary(
         for item, _reason in competitor_signals:
             rating = item.get("rating") or {}
             lines.append(
-                f"- {item.get('title')} (rank {item.get('rank_absolute')}) is outside {target_city} "
+                f"- {item.get('title')} (rank {item_rank(item)}) is outside {target_city} "
                 f"but still ranking here | city={city_from_address_info(item) or 'missing'} | "
                 f"rating={rating.get('value')} reviews={rating.get('votes_count')}"
             )
@@ -235,7 +245,7 @@ def main() -> int:
         rank = item.get("rank_absolute")
         if not isinstance(rank, int):
             continue
-        if rank not in {4, 5, 6}:
+        if rank not in {4, 5, 6, 7, 8}:
             continue
         reason = exclusion_reason(item, exclusions, args.city, today)
         status = "shortlisted" if reason is None else "excluded"
