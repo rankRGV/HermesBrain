@@ -59,3 +59,14 @@ Example:
 ```text
 Read /root/HermesBrain/context/prospecting-rules.md and /root/HermesBrain/docs/dataforseo.md, then plan tonight's prospecting run.
 ```
+
+## Install Hermes Skill
+
+To install the repo-backed Hermes skill onto the VPS:
+
+```bash
+cd /root/HermesBrain
+bash scripts/install_hermes_skill.sh
+```
+
+This installs `rankrgv-prospecting-vps` into `~/.hermes/skills/` so Hermes can auto-trigger it on prospecting requests.
