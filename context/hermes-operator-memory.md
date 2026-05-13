@@ -54,6 +54,7 @@ For prospecting tasks, report:
 - Do not skip deterministic scripts in favor of model-only summaries.
 - Do not pitch active clients or known prospects already in pipeline.
 - Prefer concise operational summaries over long explanations.
+- Do not broaden scope automatically. If the requested city, niche, date, or market yields no viable rank 4-6 candidates, report the zero-result outcome and ask before expanding to nearby cities, adjacent niches, or alternate queries.
 
 ## Session Startup
 

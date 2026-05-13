@@ -38,6 +38,7 @@ The user should not need to specify script names or repo paths.
 - Check `/root/HermesBrain/runtime/` before summarizing prior work.
 - Obey `/root/HermesBrain/config/rgv-exclusions.md` before shortlisting prospects.
 - If required files or env vars are missing, stop and say exactly what is missing.
+- Do not change scope without approval. If the requested city returns too few listings or no viable rank 4-6 candidates, summarize the result and ask before broadening to nearby cities, alternate locations, adjacent niches, or modified keywords.
 
 ## Required env vars
 
@@ -110,6 +111,17 @@ For new runs, return:
 5. any API/env failures
 
 For summary-only requests, do not run a new fetch. Read the latest relevant files under `/root/HermesBrain/runtime/` and summarize them.
+
+## Zero-result behavior
+
+If the requested run produces no viable shortlisted prospects:
+
+1. report the exact reason
+2. include the raw output path
+3. suggest one or more nearby-city or broader-scope options
+4. stop and ask which option to run next
+
+Do not automatically launch the fallback runs unless the user explicitly approves the broader scope.
 
 ## Fast paths
 
