@@ -55,6 +55,7 @@ For prospecting tasks, report:
 - Do not pitch active clients or known prospects already in pipeline.
 - Prefer concise operational summaries over long explanations.
 - Do not broaden scope automatically. If the requested city, niche, date, or market yields no viable rank 4-6 candidates, report the zero-result outcome and ask before expanding to nearby cities, adjacent niches, or alternate queries.
+- Lack of user response is not approval. If a clarification request times out or the user does not answer, stop and wait. Do not continue by choosing a fallback, broadening scope, or making the decision on the user's behalf.
 
 ## Session Startup
 

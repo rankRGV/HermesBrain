@@ -39,6 +39,7 @@ The user should not need to specify script names or repo paths.
 - Obey `/root/HermesBrain/config/rgv-exclusions.md` before shortlisting prospects.
 - If required files or env vars are missing, stop and say exactly what is missing.
 - Do not change scope without approval. If the requested city returns too few listings or no viable rank 4-6 candidates, summarize the result and ask before broadening to nearby cities, alternate locations, adjacent niches, or modified keywords.
+- Lack of user response is not approval. If a clarification request is unanswered or times out, stop and wait. Do not continue automatically.
 
 ## Required env vars
 
@@ -122,6 +123,8 @@ If the requested run produces no viable shortlisted prospects:
 4. stop and ask which option to run next
 
 Do not automatically launch the fallback runs unless the user explicitly approves the broader scope.
+
+If the user does not answer the clarification request, do not pick an option yourself.
 
 ## Fast paths
 
